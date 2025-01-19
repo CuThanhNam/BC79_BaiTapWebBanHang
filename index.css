@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 16px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+div {
+    display: flex;
+}
+div {
+    /* display: block; */
+    unicode-bidi: isolate;
+}
+em {
+    font-style: italic;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+button {
+    appearance: auto;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+.banner {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to left, #8942a8, #ba382f);
+    overflow: hidden;
+}
+.main-cart {
+    position: absolute;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    align-self: center;
+    align-items: center;
+}
+.main-cart .card:hover {
+    height: 450px;
+    width: 260px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.main-cart .card:hover .details {
+    bottom: 0;
+}
+.main-cart .card:hover .wrapper {
+    display: block;
+}
+.card {
+    position: relative;
+    flex-shrink: 0;
+    height: 300px;
+    width: 200px;
+    background-color: #010101;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 7px 5px -5px #4d4b4b;
+    transition: 0.5s;
+}
+.top-bar {
+    transform: translateY(0.5rem);
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 1rem;
+}
+.top-bar .fa-apple {
+    font-size: 1.5rem;
+}
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+.fa, .fab, .fad, .fal, .far, .fas {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fa-apple::before {
+    content: "\f179";
+}
+.top-bar .stocks {
+    font-size: 0.8rem;
+    color: lightgreen;
+}
+.card .img-container {
+    position: absolute;
+    height: 185px;
+    width: 185px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transform: translateY(35px);
+}
+.card .img-container img {
+    width: 100%;
+    align-self: center;
+}
+.card .img-container .out-of-stock-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.card .img-container .out-of-stock-cover span {
+    font-weight: 900;
+    color: rgba(255, 200, 200, 0.75);
+    font-size: 1.5rem;
+}
+.card .details {
+    position: absolute;
+    height: 220px;
+    width: 100%;
+    background-color: #2e2f33;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    bottom: -165px;
+    transition: 0.25s;
+}
+.card .details .name-fav {
+    justify-content: space-between;
+}
+.card .details .name-fav strong {
+    font-weight: 600;
+}
+button {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.fa, .fas {
+    font-weight: 900;
+}
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+.fa-heart::before {
+    content: "\f004";
+}
+.card .details .wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(5px);
+    display: none;
+}
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.details .wrapper p {
+    font-size: 0.9rem;
+    padding: 5px 0;
+    font-weight: light;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.card .details .purchase {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .details .purchase p {
+    font-weight: 500;
+}
+.details .purchase .add-btn {
+    border-radius: 20px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    padding: 6px 10px;
+}
+.details .purchase .add-btn:hover {
+    background: white;
+    color: black;
+}
+.fa-chevron-right::before {
+    content: "\f054";
+}
+.fa-shopping-cart {
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    color: black;
+}
+.fa-shopping-cart::before {
+    content: "\f07a";
+}
+.fa-shopping-cart:hover {
+    color: white;
+}
+.total-qty {
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 1rem;
+    font-weight: 600;
+    top: 1rem;
+    right: 1.5rem;
+    user-select: none;
+}
+.banner .cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+/* end trang sản phẩm */
+/* start giỏ hàng */
+
+/* end giỏ hàng */
