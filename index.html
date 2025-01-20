@@ -11,6 +11,9 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./pay.html">
+    <link rel="stylesheet" href="./cart.html">
+    <link rel="stylesheet" href="./order.html">
     <link rel="stylesheet" href="./index.css">
 <style>
         .--savior-overlay-transform-reset {
@@ -237,7 +240,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                         <div class="details">
                             <div class="name-fav">
                                 <strong class="product-name">Airpods Pro</strong>
-                                <button onclick="this.classList.toggle(fav)" class="heart">
+                                <button onclick="" class="heart">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
@@ -251,7 +254,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                                 <p class="product-price">$ 400</p>
                                 <span class="btn-add">
                                     <div>
-                                        <button onclick="addItem(this)" class="add-btn">
+                                        <button onclick="" class="add-btn">
                                             Add
                                             <i class="fas fa-chevron-right"></i>
                                         </button>
@@ -274,7 +277,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                         <div class="details">
                             <div class="name-fav">
                                 <strong class="product-name">Apple Watch</strong>
-                                <button onclick="this.classList.toggle(fav)" class="heart">
+                                <button onclick="" class="heart">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
@@ -286,7 +289,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                                 <p class="product-price">$ 500</p>
                                 <span class="btn-add">
                                     <div>
-                                        <button onclick="addItem(this)" class="add-btn">
+                                        <button onclick="" class="add-btn">
                                             Add
                                             <i class="fas fa-chevron-right"></i>
                                         </button>
@@ -309,19 +312,19 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                         <div class="details">
                             <div class="name-fav">
                                 <strong class="product-name">Macbook Pro</strong>
-                                <button onclick="this.classList.toggle(fav)" class="heart">
+                                <button onclick="" class="heart">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
                             <div class="wrapper">
                                 <h5>The best for the brightest</h5>
-                                <p>Designed for those who defy limits and change the world, the new MacBook Pro is by far notebook we’ve ever made.</p>
+                                <p>Designed for those defy limits and change the world, the new MacBook Pro is far notebook we’ve ever made.</p>
                             </div>
                             <div class="purchase">
                                 <p class="product-price">$ 2000</p>
                                 <span class="btn-add">
                                     <div>
-                                        <button onclick="addItem(this)" class="add-btn">
+                                        <button onclick="" class="add-btn">
                                             Add
                                             <i class="fas fa-chevron-right"></i>
                                         </button>
@@ -344,19 +347,19 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                         <div class="details">
                             <div class="name-fav">
                                 <strong class="product-name">iPhone 11 pro</strong>
-                                <button onclick="this.classList.toggle(fav)" class="heart">
+                                <button onclick="" class="heart">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
                             <div class="wrapper">
-                                <h5>Pro cameras. Pro display. Pro performance</h5>
+                                <h5>Pro cameras. Pro display.</h5>
                                 <p>A mind‑blowing chip machine learning. Welcome to the first iPhone powerful called Pro.</p>
                             </div>
                             <div class="purchase">
                                 <p class="product-price">$ 2000</p>
                                 <span class="btn-add">
                                     <div>
-                                        <button onclick="addItem(this)" class="add-btn">
+                                        <button onclick="" class="add-btn">
                                             Add
                                             <i class="fas fa-chevron-right"></i>
                                         </button>
@@ -379,7 +382,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                         <div class="details">
                             <div class="name-fav">
                                 <strong class="product-name">iPad Pro</strong>
-                                <button onclick="this.classList.toggle(fav)" class="heart">
+                                <button onclick="" class="heart">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
@@ -391,7 +394,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                                 <p class="product-price">$ 1000</p>
                                 <span class="btn-add">
                                     <div>
-                                        <button onclick="addItem(this)" class="add-btn">
+                                        <button onclick="" class="add-btn">
                                             Add
                                             <i class="fas fa-chevron-right"></i>
                                         </button>
@@ -402,7 +405,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                     </div>
                 </div>
                 <div class="nav">
-                    <button onclick="">
+                    <button onclick="goToCart()">
                         <i class="fas fa-shopping-cart" style="font-size: 2rem;"></i>
                     </button>
                     <span class="total-qty">0</span>
@@ -438,13 +441,13 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                     </div>
                   </div>
                 </div>
-                <div class="stock-limit">
+                <!-- <div class="stock-limit">
                   <em>You Can Only Buy 10 Items For Each Product</em>
                   <button class="btn-ok" onclick="">Okay</button>
-                </div>
+                </div> -->
                 <!-- end giỏ hàng -->
                 <!-- bấm vào nút purchase vào trang ẩn -->
-                <div class="order-now">
+                 <!-- <div class="order-now">
                   <div class="invoice">
                     <div class="shipping-items">
                       <div class="item-names">
@@ -467,15 +470,20 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                       <button onclick="" class="btn-cancel btn">Cancel</button>
                     </div>
                   </div>
-                </div>
+                </div>  -->
             </div>
         </div>
     </div>
+    <script>
+      function goToCart() {
+    window.location.href = 'cart.html'; // Thay URL bằng link trang giỏ hàng
+  }
+    </script>
     <!-- cdn axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- controller -->
      <script src="./app/controllers/controller.js"></script>
     <!-- my js -->
-    <script src="./app/controllers/indes.js"></script>
+    <script src="./app/controllers/index.js"></script>
 </body>
 </html>
