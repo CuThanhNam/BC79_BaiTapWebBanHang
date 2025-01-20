@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShoppingCart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./index.css">
 <style>
         .--savior-overlay-transform-reset {
@@ -402,14 +408,69 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                 </div>
                 <div onclick="sideNav(0)" class="cover" style="display: none;"></div>
                 <div class="cover purchase-cover" style="display: none;"></div>
-                <!--end Trang Quản lý sản phẩm -->
+                <div class="cart">
+                  <div class="side-nav" style="right: -100%;">
+                    <button onclick="">
+                      <i class="fas fa-times"></i>
+                    </button>
+                    <h2>Cart</h2>
+                    <div class="cart-items">
+                      <span class="empty-cart">Looks Like You Haven't Added Any Product In The Cart</span>
+                    </div>
+                    <div class="final">
+                      <strong>
+                        Total: $ 
+                        <span class="total">0</span>
+                      </strong>
+                      <div class="action">
+                        <button onclick="" class="btn buy">
+                          Purchase 
+                          <i class="fas fa-credit-card" style="color:#6665dd;"></i>
+                        </button>
+                        <button onclick="" class="btn clear">
+                          Clear Cart 
+                          <i class="fas fa-trash" style="color:#bb342f;"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stock-limit">
+                  <em>You Can Only Buy 10 Items For Each Product</em>
+                  <button class="btn-ok" onclick="">Okay</button>
+                </div>
+                <div class="order-now">
+                  <div class="invoice">
+                    <div class="shipping-items">
+                      <div class="item-names">
+                        <span></span>
+                      </div>
+                      <div class="items-price">
+                        <span></span>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="payment">
+                      <em>payment</em>
+                      <div>
+                        <p>total amount to be paid:</p>
+                        <span class="pay"></span>
+                      </div>
+                    </div>
+                    <div class="order">
+                      <button onclick="" class="btn-order btn">Order Now</button>
+                      <button onclick="" class="btn-cancel btn">Cancel</button>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- end Trang sản phẩm -->
-    <!-- start giỏ hàng -->
-     
-    <!-- end giỏ hàng -->
-    <script src="./js/main.min.js"></script>
+    <!-- cdn axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- controller -->
+     <script src="./app/controllers/controller.js"></script>
+    <!-- my js -->
+    <script src="./app/controllers/indes.js"></script>
 </body>
 </html>
