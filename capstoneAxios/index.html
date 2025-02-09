@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+      .--savior-overlay-transform-reset {
+        transform: none !important;
+      }
+      .--savior-overlay-z-index-top {
+        z-index: 2147483643 !important;
+      }
+      .--savior-overlay-position-relative {
+        position: relative;
+      }
+      .--savior-overlay-position-static {
+        position: static !important;
+      }
+      .--savior-overlay-overflow-hidden {
+        overflow: hidden !important;
+      }
+      .--savior-overlay-overflow-x-visible {
+        overflow-x: visible !important;
+      }
+      .--savior-overlay-overflow-y-visible {
+        overflow-y: visible !important;
+      }
+      .--savior-overlay-z-index-reset {
+        z-index: auto !important;
+      }
+      .--savior-overlay-display-none {
+        display: none !important;
+      }
+      .--savior-overlay-clearfix {
+        clear: both;
+      }
+      .--savior-overlay-reset-filter {
+        filter: none !important;
+        backdrop-filter: none !important;
+      }
+      .--savior-tooltip-host {
+        z-index: 9999;
+        position: absolute;
+        top: 0;
+      }
+      @-moz-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @-o-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--start Trang sản phẩm -->
+    <div id="app">
+      <div id="loading"></div>
+
+      <div>
+        <div class="banner">
+          <!-- Dropdown and refresh -->
+          <div class="banner-top">
+            <div class="dropdown">
+              <select
+                id="productType"
+                class="form-control"
+                style="width: 200px; margin: 10px"
+                onchange="filterSP(this.value)"
+              >
+                <option value="Samsung">Samsung</option>
+                <option value="Iphone">Iphone</option>
+              </select>
+            </div>
+
+            <button onclick="refreshPage()" class="refresh-btn">
+              <i class="fas fa-sync-alt" style="font-size: 1.5rem"></i> Refresh
+            </button>
+          </div>
+
+          <!-- trang sản phẩm -->
+          <div id="productGrid"></div>
+          <div class="nav">
+            <button onclick="goToCart()">
+              <i class="fas fa-shopping-cart" style="font-size: 2rem"></i>
+            </button>
+            <span class="total-qty">0</span>
+          </div>
+          <!-- end trang sản phẩm -->
+        </div>
+      </div>
+    </div>
+    <script>
+      function goToCart() {
+        window.location.href = "cart.html"; // Thay URL bằng link trang giỏ hàng
+      }
+    </script>
+    <!-- cdn axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- controller -->
+    <script src="./js/controller.js"></script>
+    <!-- my js -->
+    <script src="./js/sales.js"></script>
+  </body>
+</html>
